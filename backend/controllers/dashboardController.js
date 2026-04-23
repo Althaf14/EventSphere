@@ -63,7 +63,7 @@ const getCoordinatorStats = asyncHandler(async (req, res) => {
 const getStudentStats = asyncHandler(async (req, res) => {
     const studentId = req.user._id;
 
-    const totalRegistrations = await Registration.countDocuments({ student: studentId });
+    const totalRegistrations = await Registration.countDocuments({ user: studentId });
 
     // Upcoming Events
     // Need to join with Event to check status
@@ -71,11 +71,31 @@ const getStudentStats = asyncHandler(async (req, res) => {
     // Better: Aggregate or query Registration with populated event match.
 
     // Simplest: Fetch all registrations, populate, filter.
-    const registrations = await Registration.find({ student: studentId })
+    const registrations = await Registration.find({ user: studentId })
         .populate('event', 'title eventDate venue status');
 
-    const upcomingEvents = registrations
-        .filter(reg => reg.event && reg.event.status === 'Upcoming')
+    // Filter registrations to remove completed events or events where attendance is gained
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const filteredRegistrations = registrations.filter(reg => {
+        if (!reg.event) return false;
+        
+        const eventDate = new Date(reg.event.eventDate);
+        
+        // Remove if:
+        // 1. Attendance is already marked (Present)
+        // 2. Event date is in the past (before today)
+        if (reg.attendance) return false;
+        if (eventDate < today) return false;
+        
+        return true;
+    });
+
+    // Return the 5 most recent registrations to populate the dashboard
+    const recentEvents = filteredRegistrations
+        .sort((a, b) => new Date(a.event.eventDate) - new Date(b.event.eventDate)) // Sort upcoming first (ascending)
+        .slice(0, 5)
         .map(reg => reg.event);
 
     const attendanceStats = await Attendance.aggregate([
@@ -93,7 +113,7 @@ const getStudentStats = asyncHandler(async (req, res) => {
 
     res.json({
         totalRegistrations,
-        upcomingEvents,
+        upcomingEvents: recentEvents, // Still sending as 'upcomingEvents' key so frontend doesn't break, though it's recent registrations
         attendanceSummary: {
             present: presentCount,
             absent: absentCount

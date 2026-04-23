@@ -1,5 +1,10 @@
-const express = require('express');
 const dotenv = require('dotenv');
+dotenv.config();
+
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
+
+const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
@@ -9,12 +14,12 @@ const attendanceRoutes = require('./routes/attendanceRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 
-dotenv.config();
-
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    exposedHeaders: ['Content-Disposition']
+}));
 app.use(express.json());
 
 // Database Connection
@@ -36,6 +41,7 @@ app.use('/api/my-attendance', attendanceRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/reports', require('./routes/reportRoutes'));
 app.use('/api/profile', require('./routes/profileRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 app.use(notFound);
 app.use(errorHandler);

@@ -6,7 +6,7 @@ const registrationSchema = mongoose.Schema({
         required: true,
         ref: 'Event',
     },
-    student: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User',
@@ -15,6 +15,10 @@ const registrationSchema = mongoose.Schema({
         type: String,
         enum: ['registered', 'cancelled'],
         default: 'registered',
+    },
+    attendance: {
+        type: Boolean,
+        default: false,
     },
     registeredAt: {
         type: Date,
@@ -25,7 +29,7 @@ const registrationSchema = mongoose.Schema({
 });
 
 // Prevent duplicate registrations for the same event by the same student
-registrationSchema.index({ event: 1, student: 1 }, { unique: true });
+registrationSchema.index({ event: 1, user: 1 }, { unique: true });
 
 const Registration = mongoose.model('Registration', registrationSchema);
 

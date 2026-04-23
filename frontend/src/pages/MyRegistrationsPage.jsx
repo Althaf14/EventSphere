@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
+import { BookMarked, Calendar, MapPin, Clock, Award, Loader2 } from 'lucide-react';
 
 const MyRegistrationsPage = () => {
     const [registrations, setRegistrations] = useState([]);
@@ -7,75 +8,93 @@ const MyRegistrationsPage = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchRegistrations = async () => {
-            try {
-                const { data } = await api.get('/registrations/my');
-                setRegistrations(data);
-                setLoading(false);
-            } catch (err) {
-                setError(err.response?.data?.message || 'Failed to fetch registrations');
-                setLoading(false);
-            }
-        };
-
-        fetchRegistrations();
+        api.get('/registrations/my')
+            .then(({ data }) => setRegistrations(data))
+            .catch((err) => setError(err.response?.data?.message || 'Failed to fetch registrations'))
+            .finally(() => setLoading(false));
     }, []);
 
-    if (loading) return <div className="text-white text-center mt-10">Loading registrations...</div>;
-    if (error) return <div className="text-red-500 text-center mt-10">{error}</div>;
+    if (loading) return (
+        <div className="min-h-[60vh] flex items-center justify-center">
+            <Loader2 className="w-8 h-8 text-brand-400 animate-spin" />
+        </div>
+    );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-6">
-            <h1 className="text-3xl font-bold text-blue-400 mb-8">My Registrations</h1>
+        <div className="page-wrapper animate-fade-in-up">
+            {/* Header */}
+            <div className="mb-10">
+                <div className="section-tag"><BookMarked className="w-3.5 h-3.5" /> Student Portal</div>
+                <h1 className="page-heading mb-1">My Registrations</h1>
+                <p className="text-slate-400 text-sm">All events you have registered for.</p>
+            </div>
+
+            {error && <div className="alert-error mb-6">{error}</div>}
 
             {registrations.length === 0 ? (
-                <p className="text-gray-400">You have not registered for any events yet.</p>
+                <div className="empty-state">
+                    <div className="empty-state-icon"><BookMarked className="w-9 h-9" /></div>
+                    <h2 className="font-display text-2xl font-bold text-white mb-2">No Registrations Yet</h2>
+                    <p className="text-slate-400 text-sm">You have not registered for any events yet.</p>
+                </div>
             ) : (
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left text-gray-400">
-                            <thead className="bg-gray-700 text-gray-200 uppercase text-sm font-bold">
-                                <tr>
-                                    <th className="py-3 px-6">Event Title</th>
-                                    <th className="py-3 px-6">Date & Time</th>
-                                    <th className="py-3 px-6">Venue</th>
-                                    <th className="py-3 px-6">Status</th>
-                                    <th className="py-3 px-6">Attendance</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-700">
-                                {registrations.map((reg) => (
-                                    <tr key={reg._id} className="hover:bg-gray-750">
-                                        <td className="py-4 px-6 font-medium text-white">{reg.event?.title || 'Unknown Event'}</td>
-                                        <td className="py-4 px-6">
-                                            {reg.event?.eventDate ? new Date(reg.event.eventDate).toLocaleDateString() : 'N/A'} - {reg.event?.startTime || ''}
-                                        </td>
-                                        <td className="py-4 px-6">{reg.event?.venue || 'N/A'}</td>
-                                        <td className="py-4 px-6 capitalize">
-                                            <span className={`px-2 py-1 rounded text-xs ${reg.status === 'registered' ? 'bg-green-900 text-green-200' : 'bg-red-900 text-red-200'}`}>
-                                                {reg.status}
-                                            </span>
-                                        </td>
-                                        <td className="py-4 px-6 flex items-center gap-4">
-                                            {reg.attendance ? (
+                <div className="table-container overflow-x-auto">
+                    <table className="w-full min-w-[640px]">
+                        <thead>
+                            <tr className="table-header-row">
+                                <th className="table-th">Event</th>
+                                <th className="table-th">Date &amp; Time</th>
+                                <th className="table-th">Venue</th>
+                                <th className="table-th">Status</th>
+                                <th className="table-th">Attendance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {registrations.map((reg) => (
+                                <tr key={reg._id} className="table-row">
+                                    <td className="table-cell-bold">{reg.event?.title || 'Unknown Event'}</td>
+                                    <td className="table-cell">
+                                        <div className="flex items-center gap-1.5">
+                                            <Calendar className="w-3.5 h-3.5 text-brand-400 flex-shrink-0" />
+                                            {reg.event?.eventDate ? new Date(reg.event.eventDate).toLocaleDateString('en-US', { day: 'numeric', month: 'short' }) : 'N/A'}
+                                            {reg.event?.startTime && (
                                                 <>
-                                                    <span className="text-green-400 font-bold">Present</span>
-                                                    <button
-                                                        onClick={() => window.open(`/report/${reg._id}`, '_blank')}
-                                                        className="bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold py-1 px-2 rounded"
-                                                    >
-                                                        View Certificate
-                                                    </button>
+                                                    <Clock className="w-3.5 h-3.5 text-violet-400 flex-shrink-0 ml-1" />
+                                                    {reg.event.startTime}
                                                 </>
-                                            ) : (
-                                                <span className="text-gray-500">Not Marked</span>
                                             )}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                        </div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div className="flex items-center gap-1.5">
+                                            <MapPin className="w-3.5 h-3.5 text-rose-400 flex-shrink-0" />
+                                            {reg.event?.venue || 'N/A'}
+                                        </div>
+                                    </td>
+                                    <td className="table-cell capitalize">
+                                        <span className={reg.status === 'registered' ? 'badge-success' : 'badge-error'}>
+                                            {reg.status}
+                                        </span>
+                                    </td>
+                                    <td className="table-cell">
+                                        {reg.attendance ? (
+                                            <div className="flex items-center gap-3">
+                                                <span className="badge-success">Present</span>
+                                                <button
+                                                    onClick={() => window.open(`/report/${reg._id}`, '_blank')}
+                                                    className="flex items-center gap-1 text-amber-400 hover:text-amber-300 text-xs font-semibold transition-colors"
+                                                >
+                                                    <Award className="w-3.5 h-3.5" /> Certificate
+                                                </button>
+                                            </div>
+                                        ) : (
+                                            <span className="text-slate-500 text-xs italic">Not marked</span>
+                                        )}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             )}
         </div>

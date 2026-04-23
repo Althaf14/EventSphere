@@ -4,10 +4,12 @@ const path = require('path');
 // Set storage engine
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/');
+        cb(null, 'uploads/events/');
     },
     filename: function (req, file, cb) {
-        cb(null, 'image-' + Date.now() + path.extname(file.originalname));
+        // Generate unique filename: event-timestamp-random-extension
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, 'event-' + uniqueSuffix + path.extname(file.originalname));
     }
 });
 

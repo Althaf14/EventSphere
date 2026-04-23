@@ -1,6 +1,6 @@
-# College Event Manager
+# Event Sphere
 
-A full-stack web application for managing college events, built with the MERN stack (MongoDB, Express.js, React, Node.js). This application allows users to view, register for, and manage events, with features for administrators to create and oversee event details.
+A full-stack web application for managing college events, built with the MERN stack (MongoDB, Express.js, React, Node.js). Event Sphere allows users to view, register for, and manage events, with features for administrators and faculty to create and oversee event details.
 
 ## Features
 

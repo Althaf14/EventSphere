@@ -11,8 +11,8 @@ const { protect, facultyOrAdmin } = require('../middleware/authMiddleware');
 
 router.post('/:eventId', protect, registerEvent);
 router.get('/my', protect, getMyRegistrations);
-router.get('/event/:eventId', protect, facultyOrAdmin, getEventRegistrations);
-router.put('/:id/attendance', protect, facultyOrAdmin, markAttendance);
+router.get('/event/:eventId', protect, getEventRegistrations);
+router.put('/:id/attendance', protect, markAttendance);
 router.get('/:id/certificate', protect, getCertificate);
 
 module.exports = router;

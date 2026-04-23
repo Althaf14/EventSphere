@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import EventCard from '../components/EventCard';
+import { Search, Filter, Plus, Loader2, Sparkles, CalendarDays } from 'lucide-react';
+import { toast } from 'react-hot-toast';
 
 const EventsPage = () => {
     const [events, setEvents] = useState([]);
@@ -11,205 +14,198 @@ const EventsPage = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
 
-    // Fetch Events
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [categories, setCategories] = useState(['All']);
+
     useEffect(() => {
         const fetchEvents = async () => {
             try {
                 const { data } = await api.get('/events');
                 setEvents(data);
+                const uniqueCategories = ['All', ...new Set(data.map(e => e.category).filter(Boolean))];
+                setCategories(uniqueCategories);
             } catch (err) {
                 setError(err.response?.data?.message || 'Failed to fetch events');
+                toast.error('Failed to load events');
             }
         };
-
         const fetchMyRegistrations = async () => {
-            if (user && user.role === 'student') {
+            if (user?.role === 'student') {
                 try {
                     const { data } = await api.get('/registrations/my');
                     setMyRegistrations(data.map(reg => reg.event._id));
-                } catch (err) {
-                    console.error("Failed to fetch registrations", err);
-                }
+                } catch { }
             }
         };
-
         Promise.all([fetchEvents(), fetchMyRegistrations()]).then(() => setLoading(false));
     }, [user]);
 
-    const handleRegister = async (eventId) => {
-        if (!window.confirm("Confirm registration for this event?")) return;
+    const filteredEvents = useMemo(() => {
+        let result = events;
+        if (selectedCategory !== 'All') result = result.filter(e => e.category === selectedCategory);
+        if (searchTerm) result = result.filter(e =>
+            e.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            e.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            e.venue?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        return result;
+    }, [events, searchTerm, selectedCategory]);
 
+    const handleRegister = async (eventId) => {
         try {
             await api.post(`/events/${eventId}/register`);
-            alert('Registration Successful!');
-            // Update local state to reflect registration
-            setMyRegistrations([...myRegistrations, eventId]);
-            // Optimistically update event count (optional, but good UX)
-            setEvents(events.map(ev =>
-                ev._id === eventId
-                    ? { ...ev, registeredCount: (ev.registeredCount || 0) + 1 }
-                    : ev
-            ));
-            navigate('/my-registrations');
+            toast.success('Registration Successful!');
+            setMyRegistrations(prev => [...prev, eventId]);
+            setEvents(prev => prev.map(ev => ev._id === eventId ? { ...ev, registeredCount: (ev.registeredCount || 0) + 1 } : ev));
         } catch (err) {
-            alert(err.response?.data?.message || 'Registration failed');
+            toast.error(err.response?.data?.message || 'Registration failed');
         }
     };
 
     const handleUnregister = async (eventId) => {
-        if (!window.confirm("Are you sure you want to unregister from this event?")) return;
-
         try {
             await api.delete(`/events/${eventId}/unregister`);
-            alert('Unregistered Successfully');
-            setMyRegistrations(myRegistrations.filter(id => id !== eventId));
-            setEvents(events.map(ev =>
-                ev._id === eventId
-                    ? { ...ev, registeredCount: Math.max((ev.registeredCount || 0) - 1, 0) }
-                    : ev
-            ));
+            toast.success('Unregistered Successfully');
+            setMyRegistrations(prev => prev.filter(id => id !== eventId));
+            setEvents(prev => prev.map(ev => ev._id === eventId ? { ...ev, registeredCount: Math.max((ev.registeredCount || 0) - 1, 0) } : ev));
         } catch (err) {
-            alert(err.response?.data?.message || 'Unregistration failed');
+            toast.error(err.response?.data?.message || 'Unregistration failed');
         }
     };
 
-    const getStatusBadge = (status) => {
-        let colorClass = 'bg-gray-600 text-gray-200';
-        switch (status) {
-            case 'Upcoming':
-                colorClass = 'bg-green-900 text-green-200';
-                break;
-            case 'Ongoing':
-                colorClass = 'bg-blue-900 text-blue-200';
-                break;
-            case 'Completed':
-                colorClass = 'bg-gray-700 text-gray-400';
-                break;
-            default:
-                break;
-        }
-        return <span className={`py-1 px-2 rounded text-xs font-semibold ${colorClass}`}>{status}</span>;
-    };
+    if (loading) return (
+        <div className="min-h-screen flex justify-center items-center">
+            <div className="text-center">
+                <Loader2 className="w-10 h-10 text-brand-400 animate-spin mx-auto mb-3" />
+                <p className="text-slate-400 text-sm">Loading events…</p>
+            </div>
+        </div>
+    );
 
-    if (loading) return <div className="text-white text-center mt-10">Loading events...</div>;
-    if (error) return <div className="text-red-500 text-center mt-10">{error}</div>;
+    if (error) return (
+        <div className="min-h-screen flex justify-center items-center px-4">
+            <div className="alert-error max-w-sm">{error}</div>
+        </div>
+    );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-6">
-            <header className="flex justify-between items-center mb-8">
-                <div>
-                    <h1 className="text-3xl font-bold text-blue-400">Events</h1>
-                    <p className="text-gray-400 mt-1">Discover and register for upcoming college events.</p>
-                </div>
-                {user && (
-                    <div className="flex items-center gap-4">
-                        {(user.role === 'admin' || user.role === 'coordinator' || user.role === 'faculty') && (
-                            <button
-                                onClick={() => navigate('/events/create')}
-                                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 flex items-center"
-                            >
-                                <span className="mr-2">+</span> Create Event
-                            </button>
-                        )}
-                        {user.role === 'student' && (
-                            <button
-                                onClick={() => navigate('/my-registrations')}
-                                className="bg-gray-700 hover:bg-gray-600 text-white text-sm py-2 px-4 rounded"
-                            >
-                                My Registrations
-                            </button>
-                        )}
+        <div className="page-wrapper animate-fade-in-up">
+            {/* ── Hero Header ──────────────────────────────── */}
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12">
+                <div className="max-w-2xl">
+                    <div className="section-tag">
+                        <Sparkles className="w-3.5 h-3.5" />
+                        Events
                     </div>
-                )}
-            </header>
+                    <h1 className="font-display text-5xl lg:text-6xl font-black tracking-tight mb-4 leading-none">
+                        Discover<br />
+                        <span className="bg-gradient-to-r from-brand-300 via-brand-400 to-violet-400 bg-clip-text text-transparent">
+                            Amazing Events
+                        </span>
+                    </h1>
+                    <p className="text-slate-400 text-base lg:text-lg leading-relaxed max-w-xl">
+                        Join workshops, hackathons, and cultural fests. Elevate your college experience
+                        with unforgettable moments.
+                    </p>
+                </div>
 
-            {events.length === 0 ? (
-                <div className="text-center py-20 bg-gray-800 rounded-lg">
-                    <p className="text-gray-400 text-xl">No events found.</p>
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-3">
+                    {user && (user.role === 'admin' || user.role === 'coordinator' || user.role === 'faculty') && (
+                        <button onClick={() => navigate('/events/create')} className="btn-primary-lg">
+                            <Plus className="w-5 h-5" /> Create Event
+                        </button>
+                    )}
+                    {user?.role === 'student' && (
+                        <button onClick={() => navigate('/my-registrations')} className="btn-secondary" style={{ paddingTop: '14px', paddingBottom: '14px' }}>
+                            <CalendarDays className="w-4 h-4 text-brand-400" /> My Schedule
+                        </button>
+                    )}
+                </div>
+            </div>
+
+            {/* ── Search & Filter Bar ───────────────────────── */}
+            <div className="sticky top-16 z-40 mb-10">
+                <div className="bg-surface-800/90 backdrop-blur-xl border border-white/[0.08] rounded-2xl p-2 flex flex-col sm:flex-row gap-2 shadow-card-lg">
+                    {/* Search */}
+                    <div className="relative flex-grow group">
+                        <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <Search className="h-4 w-4 text-slate-500 group-focus-within:text-brand-400 transition-colors" />
+                        </span>
+                        <input
+                            id="events-search"
+                            type="text"
+                            className="block w-full pl-10 pr-4 py-3 bg-transparent text-sm text-white placeholder-slate-500 focus:outline-none rounded-xl focus:bg-white/[0.04] transition-all"
+                            placeholder="Search events by name, description, venue…"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="w-px bg-white/[0.06] hidden sm:block" />
+
+                    {/* Category Filter */}
+                    <div className="relative min-w-[200px] group">
+                        <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <Filter className="h-4 w-4 text-slate-500 group-focus-within:text-brand-400 transition-colors" />
+                        </span>
+                        <select
+                            id="events-category-filter"
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                            className="block w-full pl-10 pr-8 py-3 bg-transparent text-sm text-white focus:outline-none rounded-xl appearance-none cursor-pointer focus:bg-white/[0.04] transition-all"
+                        >
+                            {categories.map(cat => (
+                                <option key={cat} value={cat}>{cat}</option>
+                            ))}
+                        </select>
+                        <span className="pointer-events-none absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400">
+                            <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Results Count ─────────────────────────────── */}
+            {!loading && (
+                <div className="flex items-center gap-2 mb-6">
+                    <span className="text-slate-400 text-sm">
+                        Showing <span className="text-white font-semibold">{filteredEvents.length}</span> event{filteredEvents.length !== 1 ? 's' : ''}
+                        {selectedCategory !== 'All' && <> in <span className="text-brand-400">{selectedCategory}</span></>}
+                    </span>
+                </div>
+            )}
+
+            {/* ── Events Grid ───────────────────────────────── */}
+            {filteredEvents.length === 0 ? (
+                <div className="empty-state py-28 animate-fade-in">
+                    <div className="empty-state-icon">
+                        <Search className="w-9 h-9" />
+                    </div>
+                    <h3 className="font-display text-2xl font-bold text-white mb-2">No events found</h3>
+                    <p className="text-slate-400 max-w-sm mb-6 text-sm">
+                        We couldn't find any events matching your criteria. Try adjusting your filters.
+                    </p>
+                    <button
+                        onClick={() => { setSearchTerm(''); setSelectedCategory('All'); }}
+                        className="btn-secondary"
+                    >
+                        Clear all filters
+                    </button>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {events.map((event) => {
-                        const isRegistered = myRegistrations.includes(event._id);
-
-                        return (
-                            <div key={event._id} className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:bg-gray-750 transition duration-200 flex flex-col h-full border border-gray-700">
-                                <div className="p-6 flex-grow">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <h2 className="text-xl font-bold text-white leading-tight">{event.title}</h2>
-                                        {getStatusBadge(event.status)}
-                                    </div>
-
-                                    <div className="mb-4 space-y-2 text-sm text-gray-400">
-                                        {event.department && (
-                                            <div className="inline-block bg-blue-900/30 text-blue-300 py-0.5 px-2 rounded text-xs mb-2">
-                                                {event.department}
-                                            </div>
-                                        )}
-                                        <div className="flex items-center">
-                                            <span className="mr-2">📅</span>
-                                            <span>{new Date(event.eventDate).toLocaleDateString()}</span>
-                                            <span className="mx-2">•</span>
-                                            <span>{event.startTime}</span>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <span className="mr-2">📍</span>
-                                            <span>{event.venue}</span>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-gray-300 mb-4 line-clamp-3 text-sm">{event.description}</p>
-                                </div>
-
-                                <div className="p-6 pt-0 mt-auto">
-                                    {user?.role === 'student' ? (
-                                        (() => {
-                                            const isFull = event.maxParticipants && event.registeredCount >= event.maxParticipants;
-                                            const isUpcoming = event.status === 'Upcoming';
-
-                                            if (!isUpcoming && !isRegistered) {
-                                                return <button disabled className="w-full bg-gray-700 text-gray-400 font-bold py-2 px-4 rounded cursor-not-allowed">
-                                                    {event.status}
-                                                </button>;
-                                            }
-
-                                            return (
-                                                <div className="flex flex-col gap-2">
-                                                    {isRegistered ? (
-                                                        <button
-                                                            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-200 shadow-lg shadow-red-900/20"
-                                                            onClick={() => handleUnregister(event._id)}
-                                                        >
-                                                            Unregister
-                                                        </button>
-                                                    ) : (
-                                                        <button
-                                                            className={`w-full font-bold py-2 px-4 rounded transition duration-200 flex justify-center items-center ${isFull
-                                                                    ? 'bg-red-900/50 text-red-200 cursor-not-allowed border border-red-800'
-                                                                    : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/20'
-                                                                }`}
-                                                            onClick={() => !isFull && handleRegister(event._id)}
-                                                            disabled={isFull}
-                                                        >
-                                                            {isFull ? 'Event Full' : 'Register Now'}
-                                                        </button>
-                                                    )}
-                                                </div>
-                                            );
-                                        })()
-                                    ) : (
-                                        <button
-                                            // onClick={() => navigate(`/events/${event._id}`)} 
-                                            // Details page not fully requested yet, but keeping placeholder
-                                            className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-200"
-                                        >
-                                            {event.registeredCount} / {event.maxParticipants || '∞'} Participants
-                                        </button>
-                                    )}
-                                </div>
-                            </div>
-                        );
-                    })}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredEvents.map((event) => (
+                        <EventCard
+                            key={event._id}
+                            event={event}
+                            user={user}
+                            isRegistered={myRegistrations.includes(event._id)}
+                            onRegister={handleRegister}
+                            onUnregister={handleUnregister}
+                        />
+                    ))}
                 </div>
             )}
         </div>

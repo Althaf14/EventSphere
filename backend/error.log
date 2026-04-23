@@ -1,0 +1,1153 @@
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Invalid email or password
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:27:15
+
+Error: Invalid email or password
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:27:15
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Invalid email or password
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:27:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized, no token
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:29:15
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /favicon.ico
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at read (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\body-parser\lib\read.js:54:5)
+    at jsonParser (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\body-parser\lib\types\json.js:90:5)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at cors (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\cors\lib\index.js:188:7)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\cors\lib\index.js:224:17
+    at originCallback (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\cors\lib\index.js:214:15)
+
+Error: Not authorized, no token
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:29:15
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, no token
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:29:15
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, no token
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:29:15
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not authorized as faculty or admin
+    at facultyOrAdmin (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:47:15)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:19:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Invalid email or password
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:33:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: Not Found - /uploads/events/event-1774098719611-81999561.jpg
+    at notFound (C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\errorMiddleware.js:2:19)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\serve-static\index.js:120:7)
+    at SendStream.emit (node:events:508:28)
+    at SendStream.error (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:168:17)
+    at SendStream.onStatError (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:315:12)
+    at onstat (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\send\index.js:611:26)
+    at FSReqCallback.oncomplete (node:fs:195:21)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Not authorized, token failed
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\middleware\authMiddleware.js:23:19
+    at asyncUtilWrap (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+    at next (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:291:5)
+    at router.handle (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:186:3)
+    at router (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:60:12)
+    at Layer.handleRequest (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\lib\layer.js:152:17)
+    at trimPrefix (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:342:13)
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:297:9
+    at processParams (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\router\index.js:582:12)
+
+Error: Invalid email or password
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:33:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ValidationError: AuditLog validation failed: action: `USER_APPROVED` is not a valid enum value for path `action`.
+    at Document.invalidate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3377:32)
+    at validatePath (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3152:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3093:3)
+    at async model.validate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:2670:5)
+    at async model.validateBeforeSave (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\plugins\validateBeforeSave.js:34:7)
+    at async Kareem.execPre (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\kareem\index.js:65:24)
+    at async model.$__save (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:369:5)
+    at async model.save (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:609:5)
+    at async C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:2722:9
+    at async Promise.all (index 0)
+    at async model.create (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:2707:11)
+    at async logAction (C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:7:5)
+    at async C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:163:5
+
+Error: User is already approved
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:157:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: User is already approved
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:157:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Error: User already exists
+    at C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\authController.js:66:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+ValidationError: AuditLog validation failed: action: `USER_REJECTED` is not a valid enum value for path `action`.
+    at Document.invalidate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3377:32)
+    at validatePath (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3152:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:3093:3)
+    at async model.validate (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\document.js:2670:5)
+    at async model.validateBeforeSave (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\plugins\validateBeforeSave.js:34:7)
+    at async Kareem.execPre (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\kareem\index.js:65:24)
+    at async model.$__save (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:369:5)
+    at async model.save (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:609:5)
+    at async C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:2722:9
+    at async Promise.all (index 0)
+    at async model.create (C:\Althaf\BCA\Projects\College Event Managment\backend\node_modules\mongoose\lib\model.js:2707:11)
+    at async logAction (C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:7:5)
+    at async C:\Althaf\BCA\Projects\College Event Managment\backend\controllers\adminController.js:189:5
+

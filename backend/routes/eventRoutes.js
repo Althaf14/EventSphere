@@ -15,30 +15,47 @@ const {
     checkRegistrationStatus,
     markEventAttendance,
     getEventAttendance,
-    generateCertificate
+    generateCertificate,
+    searchUsers,
+    addCoordinator,
+    removeCoordinator,
+    getEventCoordinators
 } = require('../controllers/eventController');
 const { protect, admin, facultyOrAdmin, adminOrCoordinator } = require('../middleware/authMiddleware');
+const upload = require('../middleware/uploadMiddleware');
+
+const cpUpload = upload.fields([
+    { name: 'eventImage', maxCount: 1 },
+    { name: 'coordinatorSignature', maxCount: 1 },
+    { name: 'principalSignature', maxCount: 1 }
+]);
 
 router.route('/')
     .get(getEvents)
-    .post(protect, createEvent);
+    .post(protect, cpUpload, createEvent);
 
 router.route('/my')
-    .get(protect, facultyOrAdmin, getMyEvents);
+    .get(protect, getMyEvents);
 
 router.route('/pending')
-    .get(protect, admin, getPendingEvents);
+    .get(protect, facultyOrAdmin, getPendingEvents);
+
+// Coordinator Management - MUST be before /:id routes
+router.get('/search-users', protect, searchUsers);
+router.get('/:id/coordinators', protect, getEventCoordinators);
+router.post('/:id/coordinators', protect, addCoordinator);
+router.delete('/:id/coordinators/:userId', protect, removeCoordinator);
 
 router.route('/:id')
     .get(getEventById)
-    .put(protect, updateEvent)
+    .put(protect, cpUpload, updateEvent)
     .delete(protect, admin, deleteEvent);
 
 router.route('/:id/approve')
-    .put(protect, admin, approveEvent);
+    .put(protect, facultyOrAdmin, approveEvent);
 
 router.route('/:id/reject')
-    .put(protect, admin, rejectEvent);
+    .put(protect, facultyOrAdmin, rejectEvent);
 
 router.route('/:id/register')
     .post(protect, registerForEvent);

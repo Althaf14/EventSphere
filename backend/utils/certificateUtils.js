@@ -14,7 +14,7 @@ const Attendance = require('../models/Attendance');
 const checkCertificateEligibility = async (studentId, eventId) => {
     // 1. Check Registration
     const registration = await Registration.findOne({
-        student: studentId,
+        user: studentId,
         event: eventId
     });
 

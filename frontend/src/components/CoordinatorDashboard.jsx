@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/axios';
+import { Plus, ClipboardCheck, CalendarDays, Loader2, ArrowRight } from 'lucide-react';
 
 const CoordinatorDashboard = () => {
     const [events, setEvents] = useState([]);
@@ -9,102 +10,105 @@ const CoordinatorDashboard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchCoordinatorData = async () => {
-            try {
-                const { data } = await api.get('/dashboard/coordinator');
-                setEvents(data.myEvents || []);
-            } catch (err) {
-                console.error("Failed to fetch coordinator dashboard", err);
-                setError("Failed to load your events");
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchCoordinatorData();
+        api.get('/dashboard/coordinator')
+            .then(({ data }) => setEvents(data.myEvents || []))
+            .catch(() => setError('Failed to load your events'))
+            .finally(() => setLoading(false));
     }, []);
 
-    if (loading) return <div className="text-gray-400">Loading your events...</div>;
-    if (error) return <div className="text-red-500">{error}</div>;
+    if (loading) return (
+        <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-8 h-8 text-brand-400 animate-spin" />
+        </div>
+    );
+    if (error) return <div className="alert-error">{error}</div>;
+
+    const getStatusBadge = (status) => {
+        switch (status) {
+            case 'Upcoming': return 'badge-info';
+            case 'Ongoing': return 'badge-warning';
+            case 'Completed': return 'badge-success';
+            default: return 'badge-gray';
+        }
+    };
 
     return (
-        <div className="col-span-1 md:col-span-2 bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-bold mb-4 text-purple-400">Coordinator Dashboard</h2>
-
-            <div className="mb-6 flex gap-4">
-                <button
-                    onClick={() => navigate('/events/create')}
-                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded shadow transition duration-200"
-                >
-                    + Create New Event
-                </button>
-                <button
-                    onClick={() => navigate('/attendance')}
-                    className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded shadow transition duration-200"
-                >
-                    Mark Attendance
-                </button>
+        <div className="space-y-8 animate-fade-in-up">
+            {/* Quick Actions */}
+            <div className="card">
+                <h3 className="card-title mb-4">Quick Actions</h3>
+                <div className="flex flex-wrap gap-3">
+                    <button onClick={() => navigate('/events/create')} className="btn-primary">
+                        <Plus className="w-4 h-4" /> Create New Event
+                    </button>
+                    <button onClick={() => navigate('/attendance')} className="btn-secondary">
+                        <ClipboardCheck className="w-4 h-4" /> Mark Attendance
+                    </button>
+                </div>
             </div>
 
-            <h3 className="text-lg font-bold mb-4 text-gray-200">My Created Events</h3>
+            {/* My Events Table */}
+            <div>
+                <div className="flex items-center justify-between mb-4">
+                    <h3 className="section-heading mb-0">My Created Events</h3>
+                    <button onClick={() => navigate('/events/manage')} className="btn-ghost flex items-center gap-1 text-brand-400 hover:text-brand-300">
+                        Manage all <ArrowRight className="w-4 h-4" />
+                    </button>
+                </div>
 
-            {events.length === 0 ? (
-                <div className="p-6 bg-gray-750 rounded text-center text-gray-400 border border-gray-700">
-                    You haven't created any events yet.
-                </div>
-            ) : (
-                <div className="overflow-x-auto rounded-lg border border-gray-700">
-                    <table className="w-full text-left text-gray-400">
-                        <thead className="bg-gray-900 text-gray-200 uppercase text-xs font-bold">
-                            <tr>
-                                <th className="p-4">Event Title</th>
-                                <th className="p-4">Date</th>
-                                <th className="p-4">Status</th>
-                                <th className="p-4 text-center">Registrations</th>
-                                <th className="p-4 text-center">Attendance</th>
-                                <th className="p-4">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-700 bg-gray-800">
-                            {events.map((event) => (
-                                <tr key={event._id} className="hover:bg-gray-750 transition duration-150">
-                                    <td className="p-4 font-medium text-white">{event.title}</td>
-                                    <td className="p-4">{new Date(event.eventDate).toLocaleDateString()}</td>
-                                    <td className="p-4">
-                                        <span className={`px-2 py-1 rounded text-xs font-bold capitalize
-                                            ${event.status === 'Upcoming' ? 'bg-blue-900 text-blue-200' :
-                                                event.status === 'Ongoing' ? 'bg-yellow-900 text-yellow-200' :
-                                                    'bg-green-900 text-green-200'}
-                                        `}>
-                                            {event.status}
-                                        </span>
-                                    </td>
-                                    <td className="p-4 text-center font-bold text-white">{event.registeredCount}</td>
-                                    <td className="p-4 text-center">
-                                        {event.attendanceMarked ? (
-                                            <span className="bg-green-900/50 text-green-400 text-xs font-bold px-2 py-1 rounded border border-green-800">
-                                                Completed
-                                            </span>
-                                        ) : (
-                                            <span className="bg-yellow-900/50 text-yellow-400 text-xs font-bold px-2 py-1 rounded border border-yellow-800">
-                                                Pending
-                                            </span>
-                                        )}
-                                    </td>
-                                    <td className="p-4 flex gap-3 text-sm">
-                                        <button
-                                            onClick={() => navigate(`/dashboard/event/${event._id}/registrations`)}
-                                            className="text-blue-400 hover:text-blue-300 font-medium hover:underline"
-                                        >
-                                            View List
-                                        </button>
-                                    </td>
+                <div className="table-container">
+                    {events.length === 0 ? (
+                        <div className="empty-state py-14">
+                            <div className="empty-state-icon"><CalendarDays className="w-8 h-8" /></div>
+                            <h4 className="font-display text-lg font-semibold text-white mb-2">No events yet</h4>
+                            <p className="text-slate-400 text-sm mb-5">You haven't created any events yet.</p>
+                            <button onClick={() => navigate('/events/create')} className="btn-primary">
+                                <Plus className="w-4 h-4" /> Create Your First Event
+                            </button>
+                        </div>
+                    ) : (
+                        <table className="w-full">
+                            <thead>
+                                <tr className="table-header-row">
+                                    <th className="table-th">Event Title</th>
+                                    <th className="table-th">Date</th>
+                                    <th className="table-th">Status</th>
+                                    <th className="table-th-center">Registrations</th>
+                                    <th className="table-th-center">Attendance</th>
+                                    <th className="table-th">Actions</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {events.map((event) => (
+                                    <tr key={event._id} className="table-row">
+                                        <td className="table-cell-bold">{event.title}</td>
+                                        <td className="table-cell">{new Date(event.eventDate).toLocaleDateString()}</td>
+                                        <td className="table-cell">
+                                            <span className={getStatusBadge(event.status)}>{event.status}</span>
+                                        </td>
+                                        <td className="table-cell-center font-semibold text-white">{event.registeredCount}</td>
+                                        <td className="table-cell-center">
+                                            {event.attendanceMarked ? (
+                                                <span className="badge-success">Completed</span>
+                                            ) : (
+                                                <span className="badge-warning">Pending</span>
+                                            )}
+                                        </td>
+                                        <td className="table-cell">
+                                            <button
+                                                onClick={() => navigate(`/dashboard/event/${event._id}/registrations`)}
+                                                className="text-brand-400 hover:text-brand-300 font-semibold text-xs flex items-center gap-1 transition-colors"
+                                            >
+                                                View List <ArrowRight className="w-3 h-3" />
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
                 </div>
-            )}
+            </div>
         </div>
     );
 };

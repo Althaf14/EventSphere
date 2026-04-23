@@ -4,6 +4,17 @@ import FacultyDashboard from '../components/FacultyDashboard';
 import AdminDashboard from '../components/AdminDashboard';
 import CoordinatorDashboard from '../components/CoordinatorDashboard';
 import StudentDashboard from '../components/StudentDashboard';
+import { Loader2, ShieldCheck, BookOpen, ClipboardList, GraduationCap, User } from 'lucide-react';
+
+const RoleIcon = ({ role, className = 'w-3.5 h-3.5' }) => {
+    const icons = {
+        admin: <ShieldCheck className={className} />,
+        faculty: <BookOpen className={className} />,
+        coordinator: <ClipboardList className={className} />,
+        student: <GraduationCap className={className} />,
+    };
+    return icons[role] || <User className={className} />;
+};
 
 const Dashboard = () => {
     const [user, setUser] = useState(null);
@@ -11,67 +22,42 @@ const Dashboard = () => {
 
     useEffect(() => {
         const userInfo = localStorage.getItem('userInfo');
-        if (userInfo) {
-            setUser(JSON.parse(userInfo));
-        } else {
-            navigate('/login');
-        }
+        if (userInfo) setUser(JSON.parse(userInfo));
+        else navigate('/login');
     }, [navigate]);
 
-    const logoutHandler = () => {
-        localStorage.removeItem('userInfo');
-        navigate('/login');
-    };
-
-    if (!user) {
-        return <div className="text-white text-center mt-20">Loading...</div>;
-    }
+    if (!user) return (
+        <div className="min-h-[60vh] flex items-center justify-center">
+            <Loader2 className="w-8 h-8 text-brand-400 animate-spin" />
+        </div>
+    );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-8">
-            <div className="flex justify-between items-center mb-8">
-                <h1 className="text-3xl font-bold">Welcome, {user.name}</h1>
-                <button
-                    onClick={logoutHandler}
-                    className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                >
-                    Logout
-                </button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <h2 className="text-xl font-bold mb-4">Role: {user.role.toUpperCase()}</h2>
-                    <p className="text-gray-400">
-                        You have access to the {user.role} dashboard.
-                    </p>
+        <div className="page-wrapper animate-fade-in-up">
+            {/* Page Header */}
+            <div className="mb-10">
+                <div className="section-tag">
+                    <RoleIcon role={user.role} />
+                    <span className="capitalize">{user.role} Dashboard</span>
                 </div>
-
-                {/* Specific Role Content */}
-                {user.role === 'admin' && (
-                    <AdminDashboard />
-                )}
-
-                {user.role === 'organizer' && (
-                    <div className="bg-gray-800 p-6 rounded-lg shadow-lg col-span-1 md:col-span-2">
-                        <h2 className="text-xl font-bold mb-4">Organizer Panel</h2>
-                        <button
-                            onClick={() => navigate('/events/create')}
-                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4"
-                        >
-                            Create New Event
-                        </button>
-                    </div>
-                )}
-
-                {(user.role === 'faculty' || user.role === 'coordinator') && (
-                    <CoordinatorDashboard />
-                )}
-
-                {user.role === 'student' && (
-                    <StudentDashboard />
-                )}
+                <h1 className="page-heading mb-1">Welcome back, <span className="bg-gradient-to-r from-brand-300 to-teal-300 bg-clip-text text-transparent">{user.name}</span></h1>
+                <p className="text-slate-400 text-sm">Here's what's happening with your events today.</p>
             </div>
+
+            {/* Role-Specific Dashboards */}
+            {user.role === 'admin' && <AdminDashboard />}
+            {(user.role === 'faculty' || user.role === 'coordinator') && <CoordinatorDashboard />}
+            {user.role === 'student' && <StudentDashboard />}
+
+            {/* Organizer (legacy) */}
+            {user.role === 'organizer' && (
+                <div className="card">
+                    <h2 className="section-heading">Organizer Panel</h2>
+                    <button onClick={() => navigate('/events/create')} className="btn-primary">
+                        Create New Event
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

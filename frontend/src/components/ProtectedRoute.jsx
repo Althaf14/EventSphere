@@ -14,9 +14,14 @@ const ProtectedRoute = ({ allowedRoles }) => {
 
     if (allowedRoles && !allowedRoles.includes(user.role)) {
         // Redirect to appropriate dashboard if role doesn't match
-        if (user.role === 'admin') return <Navigate to="/dashboard/admin" replace />;
-        if (user.role === 'faculty') return <Navigate to="/dashboard/faculty" replace />;
+        if (user.role === 'admin') return <Navigate to="/admin/dashboard" replace />;
+        if (user.role === 'faculty') return <Navigate to="/student/dashboard" replace />;
         return <Navigate to="/events" replace />;
+    }
+
+    // Additional check for faculty approval
+    if (user.role === 'faculty' && user.isApproved === false && allowedRoles && allowedRoles.includes('faculty') && !allowedRoles.includes('student')) {
+        return <Navigate to="/student/dashboard" replace />;
     }
 
     return <Outlet />;

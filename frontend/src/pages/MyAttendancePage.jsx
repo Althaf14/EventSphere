@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
+import { ClipboardCheck, Calendar, MapPin, Download, Award, Loader2 } from 'lucide-react';
 
 const MyAttendancePage = () => {
     const [attendance, setAttendance] = useState([]);
@@ -7,27 +8,15 @@ const MyAttendancePage = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchAttendance = async () => {
-            try {
-                const { data } = await api.get('/my-attendance');
-                setAttendance(data);
-            } catch (err) {
-                setError(err.response?.data?.message || 'Failed to fetch attendance records');
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchAttendance();
+        api.get('/my-attendance')
+            .then(({ data }) => setAttendance(data))
+            .catch((err) => setError(err.response?.data?.message || 'Failed to fetch attendance records'))
+            .finally(() => setLoading(false));
     }, []);
 
     const handleDownloadCertificate = async (eventId, eventTitle) => {
         try {
-            const response = await api.get(`/events/${eventId}/certificate`, {
-                responseType: 'blob', // Important for file download
-            });
-
-            // Create blob link to download
+            const response = await api.get(`/events/${eventId}/certificate`, { responseType: 'blob' });
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
@@ -35,82 +24,125 @@ const MyAttendancePage = () => {
             document.body.appendChild(link);
             link.click();
             link.parentNode.removeChild(link);
-        } catch (err) {
-            console.error(err);
+        } catch {
             alert('Failed to download certificate. Please try again.');
         }
     };
 
-    if (loading) return <div className="text-white text-center mt-10">Loading attendance...</div>;
-    if (error) return <div className="text-red-500 text-center mt-10">{error}</div>;
+    const presentCount = attendance.filter(r => r.status === 'Present').length;
+
+    if (loading) return (
+        <div className="min-h-[60vh] flex items-center justify-center">
+            <Loader2 className="w-8 h-8 text-brand-400 animate-spin" />
+        </div>
+    );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-6">
-            <h1 className="text-3xl font-bold text-blue-400 mb-8">My Attendance History</h1>
+        <div className="page-wrapper animate-fade-in-up">
+            {/* Header */}
+            <div className="mb-10">
+                <div className="section-tag"><ClipboardCheck className="w-3.5 h-3.5" /> Attendance</div>
+                <h1 className="page-heading mb-1">My Attendance History</h1>
+                <p className="text-slate-400 text-sm">Track your event attendance and download participation certificates.</p>
+            </div>
 
-            {attendance.length === 0 ? (
-                <div className="bg-gray-800 p-8 rounded-lg text-center text-gray-400">
-                    You have no marked attendance records yet.
-                </div>
-            ) : (
-                <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left text-gray-400">
-                            <thead className="bg-gray-700 text-gray-200 uppercase text-sm font-bold">
-                                <tr>
-                                    <th className="py-3 px-6">Event</th>
-                                    <th className="py-3 px-6">Date</th>
-                                    <th className="py-3 px-6">Venue</th>
-                                    <th className="py-3 px-6">Status</th>
-                                    <th className="py-3 px-6">Certificate</th>
-                                    <th className="py-3 px-6">Marked On</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-700">
-                                {attendance.map((record) => (
-                                    <tr key={record._id} className="hover:bg-gray-750 transition duration-150">
-                                        <td className="py-4 px-6 font-medium text-white">
-                                            {record.event?.title || 'Unknown Event'}
-                                        </td>
-                                        <td className="py-4 px-6">
-                                            {record.event?.eventDate
-                                                ? new Date(record.event.eventDate).toLocaleDateString()
-                                                : 'N/A'}
-                                        </td>
-                                        <td className="py-4 px-6">{record.event?.venue || 'N/A'}</td>
-                                        <td className="py-4 px-6">
-                                            <span className={`px-2 py-1 rounded text-xs font-bold ${record.status === 'Present'
-                                                ? 'bg-green-900 text-green-200'
-                                                : 'bg-red-900 text-red-200'
-                                                }`}>
-                                                {record.status}
-                                            </span>
-                                        </td>
-                                        <td className="py-4 px-6">
-                                            {record.status === 'Present' ? (
-                                                <button
-                                                    onClick={() => handleDownloadCertificate(record.event._id, record.event.title)}
-                                                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-1 px-3 rounded shadow transition"
-                                                >
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                    </svg>
-                                                    Download
-                                                </button>
-                                            ) : (
-                                                <span className="text-gray-600 italic text-xs">Not Eligible</span>
-                                            )}
-                                        </td>
-                                        <td className="py-4 px-6 text-sm text-gray-500">
-                                            {new Date(record.markedAt).toLocaleString()}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+            {error && <div className="alert-error mb-6">{error}</div>}
+
+            {/* Summary */}
+            {attendance.length > 0 && (
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+                    <div className="stat-card">
+                        <div className="stat-card-icon bg-brand-500/20">
+                            <ClipboardCheck className="w-5 h-5 text-brand-400" />
+                        </div>
+                        <div>
+                            <p className="stat-card-label">Total Events</p>
+                            <p className="stat-card-value">{attendance.length}</p>
+                        </div>
+                    </div>
+                    <div className="stat-card">
+                        <div className="stat-card-icon bg-emerald-500/20">
+                            <Award className="w-5 h-5 text-emerald-400" />
+                        </div>
+                        <div>
+                            <p className="stat-card-label">Present</p>
+                            <p className="stat-card-value">{presentCount}</p>
+                        </div>
+                    </div>
+                    <div className="stat-card">
+                        <div className="stat-card-icon bg-red-500/20">
+                            <Calendar className="w-5 h-5 text-red-400" />
+                        </div>
+                        <div>
+                            <p className="stat-card-label">Absent</p>
+                            <p className="stat-card-value">{attendance.length - presentCount}</p>
+                        </div>
                     </div>
                 </div>
             )}
+
+            {attendance.length === 0 ? (
+                <div className="empty-state">
+                    <div className="empty-state-icon"><ClipboardCheck className="w-9 h-9" /></div>
+                    <h2 className="font-display text-2xl font-bold text-white mb-2">No Attendance Records</h2>
+                    <p className="text-slate-400 text-sm">You have no marked attendance records yet.</p>
+                </div>
+            ) : (
+                <div className="table-container overflow-x-auto">
+                    <table className="w-full min-w-[680px]">
+                        <thead>
+                            <tr className="table-header-row">
+                                <th className="table-th">Event</th>
+                                <th className="table-th">Date</th>
+                                <th className="table-th">Venue</th>
+                                <th className="table-th">Status</th>
+                                <th className="table-th">Certificate</th>
+                                <th className="table-th">Marked On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {attendance.map((record) => (
+                                <tr key={record._id} className="table-row">
+                                    <td className="table-cell-bold">{record.event?.title || 'Unknown Event'}</td>
+                                    <td className="table-cell">
+                                        <div className="flex items-center gap-1.5">
+                                            <Calendar className="w-3.5 h-3.5 text-brand-400 flex-shrink-0" />
+                                            {record.event?.eventDate ? new Date(record.event.eventDate).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }) : 'N/A'}
+                                        </div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div className="flex items-center gap-1.5">
+                                            <MapPin className="w-3.5 h-3.5 text-rose-400 flex-shrink-0" />
+                                            {record.event?.venue || 'N/A'}
+                                        </div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <span className={record.status === 'Present' ? 'badge-success' : 'badge-error'}>
+                                            {record.status}
+                                        </span>
+                                    </td>
+                                    <td className="table-cell">
+                                        {record.status === 'Present' ? (
+                                            <button
+                                                onClick={() => handleDownloadCertificate(record.event._id, record.event.title)}
+                                                className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold text-xs transition-colors"
+                                            >
+                                                <Download className="w-3.5 h-3.5" /> Download
+                                            </button>
+                                        ) : (
+                                            <span className="text-slate-500 text-xs italic">Not eligible</span>
+                                        )}
+                                    </td>
+                                    <td className="table-cell text-slate-500 text-xs">
+                                        {new Date(record.markedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            )}
+
         </div>
     );
 };

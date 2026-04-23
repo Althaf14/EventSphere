@@ -47,11 +47,27 @@ const getMyRegistrations = asyncHandler(async (req, res) => {
     res.json(registrations);
 });
 
-// @desc    Get all registrations for an event (Faculty/Admin)
+// @desc    Get all registrations for an event (Faculty/Admin/Coordinator)
 // @route   GET /api/registrations/event/:eventId
-// @access  Private (Faculty/Admin)
+// @access  Private (Faculty/Admin/Coordinator)
 const getEventRegistrations = asyncHandler(async (req, res) => {
     const { eventId } = req.params;
+
+    const event = await Event.findById(eventId);
+    if (!event) {
+        res.status(404);
+        throw new Error('Event not found');
+    }
+
+    // Auth Check
+    const isCreator = event.createdBy.toString() === req.user._id.toString();
+    const isCoordinator = event.coordinators && event.coordinators.some(c => c.toString() === req.user._id.toString());
+    const isAdmin = req.user.role === 'admin';
+
+    if (!isCreator && !isCoordinator && !isAdmin) {
+        res.status(401);
+        throw new Error('Not authorized to view registrations');
+    }
 
     const registrations = await Registration.find({ event: eventId })
         .populate('user', 'name email department')
@@ -62,18 +78,30 @@ const getEventRegistrations = asyncHandler(async (req, res) => {
 
 // @desc    Mark attendance
 // @route   PUT /api/registrations/:id/attendance
-// @access  Private (Faculty/Admin)
+// @access  Private (Faculty/Admin/Coordinator)
 const markAttendance = asyncHandler(async (req, res) => {
-    const registration = await Registration.findById(req.params.id);
+    const registration = await Registration.findById(req.params.id).populate('event');
 
-    if (registration) {
-        registration.attendance = req.body.attendance || !registration.attendance; // Toggle if no body, or set specific
-        const updatedRegistration = await registration.save();
-        res.json(updatedRegistration);
-    } else {
+    if (!registration) {
         res.status(404);
         throw new Error('Registration not found');
     }
+
+    const event = registration.event;
+
+    // Auth Check
+    const isCreator = event.createdBy.toString() === req.user._id.toString();
+    const isCoordinator = event.coordinators && event.coordinators.some(c => c.toString() === req.user._id.toString());
+    const isAdmin = req.user.role === 'admin';
+
+    if (!isCreator && !isCoordinator && !isAdmin) {
+        res.status(401);
+        throw new Error('Not authorized to mark attendance');
+    }
+
+    registration.attendance = req.body.attendance !== undefined ? req.body.attendance : !registration.attendance;
+    const updatedRegistration = await registration.save();
+    res.json(updatedRegistration);
 });
 
 // @desc    Get certificate data

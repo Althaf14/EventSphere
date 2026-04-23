@@ -34,9 +34,13 @@ const eventSchema = mongoose.Schema({
         type: Number,
         default: 0,
     },
+    eventImage: {
+        type: String,
+        default: null,
+    },
     status: {
         type: String,
-        enum: ['Upcoming', 'Ongoing', 'Completed'],
+        enum: ['Upcoming', 'Ongoing', 'Completed', 'pending', 'Rejected', 'approved', 'Approved', 'cancelled', 'Cancelled'],
         default: 'Upcoming',
     },
     createdBy: {
@@ -44,6 +48,26 @@ const eventSchema = mongoose.Schema({
         required: true,
         ref: 'User',
     },
+    coordinators: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    }],
+    eventType: {
+        type: String,
+        enum: ['SINGLE', 'MULTI'],
+        default: 'SINGLE',
+    },
+    parentEvent: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Event',
+        default: null,
+    },
+    certificateInfo: {
+        coordinatorName: { type: String, default: 'Event Coordinator' },
+        coordinatorSignature: { type: String, default: null },
+        principalName: { type: String, default: 'Principal' },
+        principalSignature: { type: String, default: null }
+    }
 }, {
     timestamps: true,
 });

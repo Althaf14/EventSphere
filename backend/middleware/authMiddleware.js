@@ -12,7 +12,7 @@ const protect = asyncHandler(async (req, res, next) => {
         try {
             token = req.headers.authorization.split(' ')[1];
 
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const decoded = jwt.verify(token, process.env.JWT_SECRET || 'secret');
 
             req.user = await User.findById(decoded.id).select('-password');
 
@@ -49,11 +49,11 @@ const facultyOrAdmin = (req, res, next) => {
 };
 
 const adminOrCoordinator = (req, res, next) => {
-    if (req.user && (req.user.role === 'admin' || req.user.role === 'coordinator')) {
+    if (req.user && (req.user.role === 'admin' || req.user.role === 'coordinator' || req.user.role === 'faculty')) {
         next();
     } else {
         res.status(401);
-        throw new Error('Not authorized as admin or coordinator');
+        throw new Error('Not authorized as admin, coordinator, or faculty');
     }
 };
 

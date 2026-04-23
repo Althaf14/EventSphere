@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
+import { BarChart2, Loader2, Users, TrendingUp, Building2 } from 'lucide-react';
+import ExportBtn from '../components/ExportBtn';
 
 const ReportsDashboard = () => {
     const [participationStats, setParticipationStats] = useState([]);
@@ -9,131 +11,186 @@ const ReportsDashboard = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchReports = async () => {
-            try {
-                const [participationRes, attendanceRes, departmentRes] = await Promise.all([
-                    api.get('/reports/event-summary'),
-                    api.get('/reports/attendance-summary'),
-                    api.get('/reports/department-summary')
-                ]);
-
-                setParticipationStats(participationRes.data);
-                setAttendanceStats(attendanceRes.data);
-                setDepartmentStats(departmentRes.data);
-            } catch (err) {
-                console.error(err);
-                setError('Failed to fetch report data');
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchReports();
+        Promise.all([
+            api.get('/reports/event-summary'),
+            api.get('/reports/attendance-summary'),
+            api.get('/reports/department-summary'),
+        ]).then(([pRes, aRes, dRes]) => {
+            setParticipationStats(pRes.data);
+            setAttendanceStats(aRes.data);
+            setDepartmentStats(dRes.data);
+        }).catch(() => setError('Failed to fetch report data'))
+            .finally(() => setLoading(false));
     }, []);
 
-    if (loading) return <div className="text-white text-center mt-10">Loading reports...</div>;
-    if (error) return <div className="text-red-500 text-center mt-10">{error}</div>;
+    const maxDept = departmentStats.length > 0 ? Math.max(...departmentStats.map(s => s.value)) : 1;
+
+    if (loading) return (
+        <div className="min-h-[60vh] flex items-center justify-center">
+            <Loader2 className="w-8 h-8 text-brand-400 animate-spin" />
+        </div>
+    );
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-6">
-            <h1 className="text-3xl font-bold text-blue-400 mb-8">Reports & Analytics</h1>
+        <div className="page-wrapper animate-fade-in-up">
+            {/* Header */}
+            <div className="mb-10">
+                <div className="section-tag"><BarChart2 className="w-3.5 h-3.5" /> Analytics</div>
+                <h1 className="page-heading mb-1">Reports &amp; Analytics</h1>
+                <p className="text-slate-400 text-sm">Insights into event participation, attendance, and department engagement.</p>
+            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Event Participation Stats */}
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                    <div className="flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
-                        <h2 className="text-xl font-bold text-white">Event Participation</h2>
+            {error && <div className="alert-error mb-6">{error}</div>}
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Event Participation */}
+                <div className="card">
+                    <div className="flex items-center justify-between card-header">
+                        <div className="flex items-center gap-2">
+                            <TrendingUp className="w-4 h-4 text-brand-400" />
+                            <h2 className="card-title">Event Participation</h2>
+                        </div>
                         <div className="flex gap-2">
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=participation&format=pdf')} className="text-xs bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded">PDF</button>
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=participation&format=excel')} className="text-xs bg-green-600 hover:bg-green-700 text-white px-2 py-1 rounded">Excel</button>
+                            <ExportBtn url="/reports/export?type=participation&format=pdf" label="PDF" type="pdf" />
+                            <ExportBtn url="/reports/export?type=participation&format=excel" label="Excel" type="excel" />
                         </div>
                     </div>
-                    <div className="overflow-x-auto">
-                        <table className="w-full text-left text-gray-300">
-                            <thead className="text-xs uppercase bg-gray-700 text-gray-400">
-                                <tr>
-                                    <th className="py-2 px-4">Event Name</th>
-                                    <th className="py-2 px-4 text-right">Registrations</th>
+                    {participationStats.length === 0 ? (
+                        <p className="text-center text-slate-500 py-6 text-sm">No data available</p>
+                    ) : (
+                        <table className="w-full">
+                            <thead>
+                                <tr className="table-header-row">
+                                    <th className="table-th text-xs">Event Name</th>
+                                    <th className="table-th-center text-xs">Regs</th>
+                                    <th className="table-th-right text-xs">Full List</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-700">
-                                {participationStats.map((stat, index) => (
-                                    <tr key={index} className="hover:bg-gray-750">
-                                        <td className="py-3 px-4 font-medium">{stat.label}</td>
-                                        <td className="py-3 px-4 text-right font-bold text-blue-400">{stat.value}</td>
+                            <tbody>
+                                {participationStats.map((stat, i) => (
+                                    <tr key={i} className="table-row">
+                                        <td className="table-cell truncate max-w-[150px]">{stat.label}</td>
+                                        <td className="table-cell-center font-bold text-brand-400">{stat.value}</td>
+                                        <td className="table-cell text-right">
+                                            <div className="flex justify-end gap-1.5">
+                                                <ExportBtn
+                                                    url={`/reports/export?type=event-registrations&format=pdf&eventId=${stat.eventId}`}
+                                                    label="PDF"
+                                                    type="pdf"
+                                                />
+                                                <ExportBtn
+                                                    url={`/reports/export?type=event-registrations&format=excel&eventId=${stat.eventId}`}
+                                                    label="XLS"
+                                                    type="excel"
+                                                />
+                                            </div>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
-                        {participationStats.length === 0 && <p className="text-center text-gray-500 mt-4">No data available</p>}
-                    </div>
+                    )}
                 </div>
 
                 {/* Department Distribution */}
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                    <div className="flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
-                        <h2 className="text-xl font-bold text-white">Department Participation</h2>
+                <div className="card">
+                    <div className="flex items-center justify-between card-header">
+                        <div className="flex items-center gap-2">
+                            <Building2 className="w-4 h-4 text-emerald-400" />
+                            <h2 className="card-title">Department Participation</h2>
+                        </div>
                         <div className="flex gap-2">
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=department&format=pdf')} className="text-xs bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded">PDF</button>
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=department&format=excel')} className="text-xs bg-green-600 hover:bg-green-700 text-white px-2 py-1 rounded">Excel</button>
+                            <ExportBtn url="/reports/export?type=department&format=pdf" label="PDF" type="pdf" />
+                            <ExportBtn url="/reports/export?type=department&format=excel" label="Excel" type="excel" />
                         </div>
                     </div>
-                    <div className="space-y-4">
-                        {departmentStats.map((stat, index) => (
-                            <div key={index}>
-                                <div className="flex justify-between text-sm mb-1">
-                                    <span className="text-gray-300">{stat.label}</span>
-                                    <span className="font-bold text-green-400">{stat.value} Students</span>
-                                </div>
-                                <div className="w-full bg-gray-700 rounded-full h-2.5">
-                                    <div
-                                        className="bg-green-600 h-2.5 rounded-full"
-                                        style={{ width: `${(stat.value / Math.max(...departmentStats.map(s => s.value))) * 100}%` }}
-                                    ></div>
-                                </div>
-                            </div>
-                        ))}
-                        {departmentStats.length === 0 && <p className="text-center text-gray-500 mt-4">No data available</p>}
-                    </div>
+                    {departmentStats.length === 0 ? (
+                        <p className="text-center text-slate-500 py-6 text-sm">No data available</p>
+                    ) : (
+                        <div className="space-y-4">
+                            {departmentStats.map((stat, i) => {
+                                const pct = Math.round((stat.value / maxDept) * 100);
+                                return (
+                                    <div key={i}>
+                                        <div className="flex justify-between text-sm mb-1.5">
+                                            <span className="text-slate-300 font-medium">{stat.label}</span>
+                                            <span className="text-emerald-400 font-bold">{stat.value} students</span>
+                                        </div>
+                                        <div className="progress-track">
+                                            <div
+                                                className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-brand-500 transition-all duration-700"
+                                                style={{ width: `${pct}%` }}
+                                            />
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </div>
 
-                {/* Attendance Health (Full Width) */}
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 lg:col-span-2">
-                    <div className="flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
-                        <h2 className="text-xl font-bold text-white">Attendance Health (Present vs Registered)</h2>
+                {/* Attendance Health – full width */}
+                <div className="card lg:col-span-2">
+                    <div className="flex items-center justify-between card-header">
+                        <div className="flex items-center gap-2">
+                            <Users className="w-4 h-4 text-violet-400" />
+                            <h2 className="card-title">Attendance Health</h2>
+                            <span className="text-slate-500 text-xs font-normal">(Present vs Registered)</span>
+                        </div>
                         <div className="flex gap-2">
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=attendance&format=pdf')} className="text-xs bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded">PDF</button>
-                            <button onClick={() => window.open('http://localhost:5000/api/reports/export?type=attendance&format=excel')} className="text-xs bg-green-600 hover:bg-green-700 text-white px-2 py-1 rounded">Excel</button>
+                            <ExportBtn url="/reports/export?type=attendance&format=pdf" label="PDF" type="pdf" />
+                            <ExportBtn url="/reports/export?type=attendance&format=excel" label="Excel" type="excel" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {attendanceStats.map((stat, index) => (
-                            <div key={index} className="bg-gray-900 p-4 rounded border border-gray-800">
-                                <h3 className="text-lg font-semibold text-gray-200 mb-2 truncate">{stat.label}</h3>
-                                <div className="flex justify-between items-center mb-2">
-                                    <span className="text-gray-400 text-sm">Attendance Rate</span>
-                                    <span className={`text-xl font-bold ${stat.percentage >= 75 ? 'text-green-500' :
-                                        stat.percentage >= 50 ? 'text-yellow-500' : 'text-red-500'
-                                        }`}>
-                                        {stat.percentage}%
-                                    </span>
-                                </div>
-                                <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
-                                    <div
-                                        className={`h-2 rounded-full ${stat.percentage >= 75 ? 'bg-green-600' :
-                                            stat.percentage >= 50 ? 'bg-yellow-600' : 'bg-red-600'
-                                            }`}
-                                        style={{ width: `${stat.percentage}%` }}
-                                    ></div>
-                                </div>
-                                <div className="text-xs text-gray-500 flex justify-between">
-                                    <span>Registered: {stat.registered}</span>
-                                    <span>Present: {stat.present}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    {attendanceStats.length === 0 && <p className="text-center text-gray-500 mt-4">No data available</p>}
+                    {attendanceStats.length === 0 ? (
+                        <p className="text-center text-slate-500 py-6 text-sm">No data available</p>
+                    ) : (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {attendanceStats.map((stat, i) => {
+                                const pct = stat.percentage || 0;
+                                const color =
+                                    pct >= 75 ? 'from-emerald-500 to-brand-500' :
+                                        pct >= 50 ? 'from-amber-500 to-orange-500' :
+                                            'from-red-500 to-rose-500';
+                                const textColor =
+                                    pct >= 75 ? 'text-emerald-400' :
+                                        pct >= 50 ? 'text-amber-400' :
+                                            'text-red-400';
+                                return (
+                                    <div key={i} className="bg-surface-700/50 rounded-xl p-6 border border-white/[0.06] flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex justify-between items-start mb-4">
+                                                <h3 className="text-sm font-semibold text-white truncate max-w-[150px]">{stat.label}</h3>
+                                                <div className="flex gap-1.5">
+                                                    <ExportBtn
+                                                        url={`/reports/export?type=event-registrations&format=pdf&eventId=${stat.eventId}`}
+                                                        label="PDF"
+                                                        type="pdf"
+                                                    />
+                                                    <ExportBtn
+                                                        url={`/reports/export?type=event-registrations&format=excel&eventId=${stat.eventId}`}
+                                                        label="XLS"
+                                                        type="excel"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="flex justify-between items-baseline mb-2">
+                                                <span className="text-slate-400 text-xs">Attendance Rate</span>
+                                                <span className={`text-2xl font-extrabold font-display ${textColor}`}>{pct}%</span>
+                                            </div>
+                                            <div className="progress-track mb-3">
+                                                <div className={`h-full rounded-full bg-gradient-to-r ${color} transition-all duration-700`} style={{ width: `${pct}%` }} />
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-between text-[11px] text-slate-500">
+                                            <span>Registered: <span className="text-slate-300 font-semibold">{stat.registered}</span></span>
+                                            <span>Present: <span className="text-slate-300 font-semibold">{stat.present}</span></span>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

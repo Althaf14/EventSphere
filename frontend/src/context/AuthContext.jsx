@@ -28,9 +28,10 @@ export const AuthProvider = ({ children }) => {
 
             // Redirect based on role
             // Redirect based on role
+            // Redirect based on role and approval status
             if (data.role === 'admin') navigate('/admin/dashboard');
-            else if (data.role === 'faculty' || data.role === 'coordinator') navigate('/coordinator/dashboard');
-            else if (data.role === 'student') navigate('/student/dashboard');
+            else if ((data.role === 'faculty' || data.role === 'coordinator') && data.isApproved !== false) navigate('/coordinator/dashboard');
+            else if (data.role === 'student' || (data.role === 'faculty' && data.isApproved === false)) navigate('/student/dashboard');
             else navigate('/dashboard');
 
             return { success: true };
@@ -52,10 +53,13 @@ export const AuthProvider = ({ children }) => {
 
             // Redirect based on role
             // Redirect based on role
+            // Redirect based on role and approval status
             if (data.role === 'admin') navigate('/admin/dashboard');
-            else if (data.role === 'faculty' || data.role === 'coordinator') navigate('/coordinator/dashboard');
+            else if ((data.role === 'faculty' || data.role === 'coordinator') && data.isApproved !== false) navigate('/coordinator/dashboard');
             else if (data.role === 'student') navigate('/student/dashboard');
-            else navigate('/dashboard');
+            else if (data.role === 'faculty' && data.isApproved === false) {
+                // Do not navigate immediately, let the RegisterPage show the modal or wait for user action
+            } else navigate('/dashboard');
 
             return { success: true };
         } catch (error) {
